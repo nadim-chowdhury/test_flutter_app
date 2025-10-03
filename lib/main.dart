@@ -11,12 +11,13 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'My App',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.green),
       ),
       home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      //  body: Container(),
     );
   }
 }
@@ -32,22 +33,32 @@ class MyHomePage extends StatelessWidget {
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
         title: Text(title),
       ),
+      // body: Center(
+      //   child: ElevatedButton(
+      //     style: ElevatedButton.styleFrom(
+      //       padding: const EdgeInsets.symmetric(horizontal: 32, vertical: 16),
+      //       shape: RoundedRectangleBorder(
+      //         borderRadius: BorderRadius.circular(12),
+      //       ),
+      //     ),
+      //     onPressed: () {
+      //       Navigator.push(
+      //         context,
+      //         MaterialPageRoute(builder: (context) => const AuthPage()),
+      //       );
+      //     },
+      //     child: const Text("Get Started", style: TextStyle(fontSize: 18)),
+      //   ),
+      // ),
       body: Center(
-        child: ElevatedButton(
-          style: ElevatedButton.styleFrom(
-            padding: const EdgeInsets.symmetric(horizontal: 32, vertical: 16),
-            shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(12),
-            ),
+        child: Container(
+          width: 360,
+          height: 480,
+          color: Colors.blueGrey,
+          child: Center(
+            child: Text('Hello World', style: TextStyle(color: Colors.white)),
           ),
-          onPressed: () {
-            Navigator.push(
-              context,
-              MaterialPageRoute(builder: (context) => const AuthPage()),
-            );
-          },
-          child: const Text("Get Started", style: TextStyle(fontSize: 18)),
-        ),
+        ), 
       ),
     );
   }
